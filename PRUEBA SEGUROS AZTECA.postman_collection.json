@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "0ba165e4-62d1-4278-bf4b-440556028233",
+		"name": "PRUEBA SEGUROS AZTECA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28222159"
+	},
+	"item": [
+		{
+			"name": "RESPONSE 201 ACEPTADO MUJERES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSeguro\": 3,\r\n  \"cliente\": {\r\n    \"nombre\": \"Ana\",\r\n    \"apellidoPaterno\": \"Pérez\",\r\n    \"apellidoMaterno\": \"López\",\r\n    \"fechaNacimiento\": \"01/01/1990\",\r\n    \"idGenero\": 2\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/validaciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"validaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RESPONSE 201 ACEPTADO VIDA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSeguro\": 1,\r\n  \"cliente\": {\r\n    \"nombre\": \"Luis\",\r\n    \"apellidoPaterno\": \"Pérez\",\r\n    \"apellidoMaterno\": \"Gómez\",\r\n    \"fechaNacimiento\": \"01/01/1990\",\r\n    \"idGenero\": 1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/validaciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"validaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RESPONSE 401 SOLO MUJERES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSeguro\": 3,\r\n  \"cliente\": {\r\n    \"nombre\": \"Juan\",\r\n    \"apellidoPaterno\": \"López\",\r\n    \"apellidoMaterno\": \"Ramírez\",\r\n    \"fechaNacimiento\": \"01/01/1990\",\r\n    \"idGenero\": 1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/validaciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"validaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RESPONSE 401 INFARTO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSeguro\": 2,\r\n  \"cliente\": {\r\n    \"nombre\": \"Carlos\",\r\n    \"apellidoPaterno\": \"Santos\",\r\n    \"apellidoMaterno\": \"Mora\",\r\n    \"fechaNacimiento\": \"01/01/1940\",\r\n    \"idGenero\": 1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/validaciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"validaciones"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
